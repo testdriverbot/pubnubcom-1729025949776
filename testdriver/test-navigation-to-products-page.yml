@@ -1,0 +1,16 @@
+version: 4.0.69
+steps:
+  - prompt: Click on the "Products" link in the header.
+    commands:
+      - command: hover-text
+        text: Products
+        description: link in the header
+        action: click
+  - prompt: >-
+      Assert that the products page is displayed and contains relevant product
+      information.  # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: >-
+          the products page is displayed with product information like "3
+          Trillion Real-time API calls per month"
